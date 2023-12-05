@@ -1,0 +1,18 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Update a Game
+        section.content-width
+          .card.grey-card
+            form(action="/update-cobj" method="POST")
+                label(for="title") Title
+                input(type="text" name="title" id="title" value=title)
+                label(for="price") Price
+                input(type="text" name="price" id="price" value=price)
+                label(for="dev_id") Developer ID
+                input(type="text" name="dev_id" id="dev_id" value=dev_id)
+                input(type="submit" value="Update Game")
